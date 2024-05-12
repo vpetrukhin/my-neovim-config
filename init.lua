@@ -1,24 +1,20 @@
--- leader key
-vim.g.mapleader = ' '
+-- Basic
+require("core.plugins")
+require("core.mappings")
+require("core.colors")
+require("core.configs")
 
--- open config file
-vim.cmd('nmap <leader>c :e ~/.config/nvim/init.lua<cr>')
-
--- open config file
-vim.cmd('nmap <leader>s :w<cr>')
-
--- paste without change buffer
-vim.keymap.set('v', 'p', 'P')
-
--- paste without change buffer
-vim.keymap.set('n', 'U', '<C-r>')
-
--- clear highlight
-vim.keymap.set('n', '<Esc>', ':nohlsearch<cr>')
-
--- skip folds
-vim.cmd('nmap j gj')
-vim.cmd('nmap k gk')
-
--- sync clipboard
-vim.opt.clipboard = 'unnamedplus'
+--Plugins
+require("plugins.neotree")
+require("plugins.treesitter")
+require("plugins.lsp")
+require("plugins.cmp")
+require("plugins.mason")
+require("plugins.telescope")
+require("plugins.nullls")
+require("plugins.autopairs")
+require("plugins.autotag")
+require("plugins.bufferline")
+require("plugins.markdown")
+require("plugins.comments")
+require("plugins.lualine")
